@@ -18,7 +18,7 @@
                 <nav id="header_menu">
                 <ul  class="left" >
                     <c:choose>
-                        <c:when test="${sessionScope.theUser != null && sessionScope.theAdmin != null}">
+                        <c:when test="${sessionScope.theUser != null || sessionScope.theAdmin != null}">
                             <li><a href="studyController">Researchers Exchange Participations</a></li>
                         </c:when>
                         <c:otherwise>
