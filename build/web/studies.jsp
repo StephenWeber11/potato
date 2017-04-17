@@ -11,12 +11,10 @@
  <%-- Code to add new study   --%>
 <h3 id="add_new_study"><a href="newstudy.jsp" >Add a new study</a></h3>
  <%-- Code to go Back to the Main Page  --%>
-<a href="main.jsp?user=Hello,Kim" id="back_to_page">&laquo;Back to the Main Page</a>
+<a href="main.jsp" id="back_to_page">&laquo;Back to the Main Page</a>
 <%-- Section to display studies details --%> 
 <%-- Clicking on Start, Stop to Participate in that study and  Edit button to display edit page and edit study details in it--%>
 <section id="studies_section">
-
-
     <table id="my_studies_table" >
         <tr>
             <th>Study Name</th>
@@ -27,17 +25,13 @@
             <th>Action</th>
         </tr>
         <c:forEach items="${studies}" var="study">
-            <%
-                Study study = new Study();
-                String studyCode = study.getStudyCode();
-                request.setAttribute("StudyCode", studyCode);
-                %>
             <tr>
                 <td>${study.studyName}</td>
                 <td>${study.requestedParticipants}</td>
                 <td>${study.numofParticipants}</td>
-                <td name="StudyCode">${study.studyCode}</td>
+                <td name="StudyCode" value="${study.studyCode}">${study.studyCode}</td>
                 <form action="studyController" method="post">
+                    <input type="hidden" name="StudyCode" value="${study.studyCode}"/>
                     <td>
                         <button type="submit" name="action" value="start">Start</button>
                     </td>

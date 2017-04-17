@@ -3,8 +3,8 @@
 <%-- Section tag is used to write description  --%>
 <nav id="adminmenu">
     <ul>
-        <li><a href="main.jsp">Home</a></li>
-        <li><a href="reportques.jsp">Reported Questions</a></li>
+        <li><a href="studyController">Home</a></li>
+        <li><a href="studyController?action=reportedques">Reported Questions</a></li>
     </ul>
 </nav>
 <section class="main">

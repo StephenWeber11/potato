@@ -6,6 +6,7 @@
 <%-- Section to display description --%>
 <section class="copyright">
     &copy; Researchers Exchange Participations
+    <p>${cookie.value.value}</p>
 </section>
 </body>
 </html>

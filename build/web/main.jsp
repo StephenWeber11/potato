@@ -8,9 +8,9 @@
 <%-- Code to display items in List --%>
 <nav id="menu">
     <ul>
-        <li>Coins (<span class="count">${user.numCoins}</span>) </li>
-        <li>Participants (<span class="count">3</span>) </li>
-        <li>Participation (<span class="count">5</span>) </li>
+        <li>Coins (<span class="count">${theUser.numCoins}</span>) </li>
+        <li>Participants (<span class="count">${study.numofParticipants}</span>) </li>
+        <li>Participation (<span class="count">${theUser.numParticipation}</span>) </li>
         <li><br></li>
         <li><a href="userController?action=home">Home</a></li>
         <li><a href="studyController?action=play">Participate</a></li>
@@ -25,7 +25,7 @@
     <p>This site was built to help researchers conduct their user studies</p>
     <p>1 participation = 1 coin</p>
     <p><b>To participate,</b> go to "Participate" section and choose a study to complete</p>
-    <p><b>To get participants,</b> submit your study here to start getting Participations. Inorder to do so, you must have enough coins in Your account</p>
+    <p><b>To get participants,</b> submit your study here to start getting Participations. In order to do so, you must have enough coins in Your account</p>
 
 </section>
 <%-- Include tag is used to import footer page --%>

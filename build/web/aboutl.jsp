@@ -8,15 +8,15 @@
 <%-- Code to display items in List --%>
 <nav id="menu">
     <ul>
-        <li>Coins (<span class="count">2</span>) </li>
-        <li>Participants (<span class="count">3</span>) </li>
-        <li>Participation (<span class="count">5</span>) </li>
+        <li>Coins (<span class="count">${theUser.numCoins}</span>) </li>
+        <li>Participants (<span class="count">${study.numofParticipants}</span>) </li>
+        <li>Participation (<span class="count">${theUser.numParticipation}</span>) </li>
         <li><br></li>
         <li><a href="userController?action=home">Home</a></li>
-        <li><a href="participate.jsp?user=Hello,Kim">Participate</a></li>
-        <li><a href="studies.jsp?user=Hello,Kim">My Studies</a></li>
-        <li><a href="recommend.jsp?user=Hello,Kim">Recommend</a></li>
-        <li><a href="contact.jsp?user=Hello,Kim">Contact</a></li>
+        <li><a href="studyController?action=play">Participate</a></li>
+        <li><a href="studyController?action=studies">My Studies</a></li>
+        <li><a href="recommend.jsp">Recommend</a></li>
+        <li><a href="contact.jsp">Contact</a></li>
     </ul>
 </nav>
 <%-- Section tag is used to write description  --%>

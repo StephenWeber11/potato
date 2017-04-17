@@ -9,7 +9,7 @@
 <%-- Code to display Page Name --%>
 <h3 id="page_name">Reported Questions</h3>
  <%-- Code to go Back to the Main Page  --%>
-<a href="main.jsp?user=Hello,Kim" id="back_to_page">&laquo;Back to the Main Page</a>
+<a href="main.jsp" id="back_to_page">&laquo;Back to the Main Page</a>
 <%-- Section to display studies details --%> 
 <%-- Clicking on Start, Stop to Participate in that study and  Edit button to display edit page and edit study details in it--%>
 <section id="studies_section">
@@ -18,19 +18,18 @@
             <th>Question</th>
             <th>Action</th>
         </tr>
-        <tr>
-            <%-- First study details --%>
-            <td>I enjoy outdoor activities</td>
-            <td>
-                <button type="button">Approve</button>
-                <button type="button">Disapprove</button>
-            </td>
-        </tr>
-        <%-- Second study details --%>
-        <tr>
-            <td></td>
-            <td></td>
-        </tr>
+        <c:forEach items="${reportedStudies}" var="study">
+            <tr>
+                <td>${study.question}</td>
+                <form action="studyController" method="post">
+                    <input type="hidden" name="StudyCode" value="${study.studyCode}"/>
+                    <td>
+                        <button type="submit" name="action" value="approve">Approve</button>
+                        <button type="submit" name="action" value="disapprove">Disapprove</button>
+                    </td>
+                </form>
+            </tr>
+        </c:forEach>
     </table>
 
 </section>

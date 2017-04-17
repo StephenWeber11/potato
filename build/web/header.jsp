@@ -17,18 +17,21 @@
         <div id="header">
                 <nav id="header_menu">
                 <ul  class="left" >
-                    <li>Researchers Exchange Participations</li>
+                    <li><a href="studyController">Researchers Exchange Participations</a></li>
                 </ul>
                 <ul class="right">
                     <c:choose>
                         <c:when test="${sessionScope.theUser != null}">
                             <li>Hello, <span>${theUser.name}</span></li>
                         </c:when>
+                        <c:when test="${sessionScope.theAdmin != null}">
+                        <li>Hello, <span>${theAdmin.name}</span></li>
+                        </c:when>
                     </c:choose>
                     <li><a href="userController?action=about">About Us</a></li>
                     <li><a href="userController?action=how">How it Works</a></li>
                     <c:choose>
-                        <c:when test="${sessionScope.theUser == null}">
+                        <c:when test="${sessionScope.theUser == null && sessionScope.theAdmin == null}">
                             <li><a href="login.jsp">Login</a></li>
                         </c:when>   
                         <c:otherwise>

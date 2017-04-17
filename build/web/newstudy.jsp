@@ -8,7 +8,7 @@
 <%-- Code to display Page Name --%>
 <h3 id="page_name">Adding a study</h3>
  <%-- Code to go Back to the Main Page  --%>
-<a href="main.jsp?user=Hello,Kim" id="back_to_page">&laquo;Back to the Main Page</a>
+<a href="main.jsp" id="back_to_page">&laquo;Back to the Main Page</a>
 <%-- Section to create new study --%>
 <section id="newstudy_form">
     <form action="studyController" method="post">
