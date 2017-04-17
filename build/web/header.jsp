@@ -17,7 +17,14 @@
         <div id="header">
                 <nav id="header_menu">
                 <ul  class="left" >
-                    <li><a href="studyController">Researchers Exchange Participations</a></li>
+                    <c:choose>
+                        <c:when test="${sessionScope.theUser != null && sessionScope.theAdmin != null}">
+                            <li><a href="studyController">Researchers Exchange Participations</a></li>
+                        </c:when>
+                        <c:otherwise>
+                            <li><a href="home.jsp">Researchers Exchange Participations</a></li>
+                        </c:otherwise>
+                    </c:choose>
                 </ul>
                 <ul class="right">
                     <c:choose>

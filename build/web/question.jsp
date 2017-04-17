@@ -4,7 +4,7 @@
 <nav id="menu">
     <ul>
         <li>Coins (<span class="count">${theUser.numCoins}</span>) </li>
-        <li>Participants (<span class="count">${study.numofParticipants}</span>) </li>
+        <li>Participants (<span class="count">${part}</span>) </li>
         <li>Participation (<span class="count">${theUser.numParticipation}</span>) </li>
         <li><br></li>
         <li><a href="userController?action=home">Home</a></li>

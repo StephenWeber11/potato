@@ -9,7 +9,7 @@
 <%-- Code to display Page Name --%>
 <h3 id="page_name">Reported Questions</h3>
  <%-- Code to go Back to the Main Page  --%>
-<a href="main.jsp" id="back_to_page">&laquo;Back to the Main Page</a>
+<a href="studyController" id="back_to_page">&laquo;Back to the Main Page</a>
 <%-- Section to display studies details --%> 
 <%-- Clicking on Start, Stop to Participate in that study and  Edit button to display edit page and edit study details in it--%>
 <section id="studies_section">
